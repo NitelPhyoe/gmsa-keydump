@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "gmsa-keydump"
+version = "1.0.0"
+description = "gMSA password blob parser and AES key deriver for Kerberos-only environments"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Nitel Phyoe", email = "hello@phyozinkhant.dev" }
+]
+keywords = ["pentest", "activedirectory", "kerberos", "gmsa", "redteam", "adcs"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Environment :: Console",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "impacket>=0.11.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/nitelphyoe/gmsa-keydump"
+Repository = "https://github.com/nitelphyoe/gmsa-keydump"
+Issues = "https://github.com/nitelphyoe/gmsa-keydump/issues"
+
+[project.scripts]
+gmsa-keydump = "gmsa_keydump.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gmsa_keydump*"]
