@@ -59,9 +59,9 @@ examples:
         help='Base64-encoded blob string (inline)')
 
     parser.add_argument('-s', '--sam', required=True,
-        help='sAMAccountName of the gMSA account (e.g. Pong_gMSA$)')
+        help='sAMAccountName of the gMSA account (e.g. P_gMSA$)')
     parser.add_argument('-d', '--domain', required=True,
-        help='DNS domain of the gMSA (e.g. pong.htb)')
+        help='DNS domain of the gMSA (e.g. nitel.htb)')
     parser.add_argument('--raw-blob', action='store_true',
         help='Input is a full MSDS-MANAGEDPASSWORD_BLOB (bloodyAD --raw). '
              'Without this flag input is treated as already-extracted password bytes.')
