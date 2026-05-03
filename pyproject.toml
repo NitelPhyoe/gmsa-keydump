@@ -34,4 +34,6 @@ gmsa-keydump = "gmsa_keydump.main:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["gmsa_keydump*"]
+
+[tool.setuptools.package-dir]
+"" = "."
