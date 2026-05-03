@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "gmsa-keydump"
@@ -32,8 +32,5 @@ Issues = "https://github.com/nitelphyoe/gmsa-keydump/issues"
 [project.scripts]
 gmsa-keydump = "gmsa_keydump.main:main"
 
-[tool.setuptools.packages.find]
-where = ["."]
-
-[tool.setuptools.package-dir]
-"" = "."
+[tool.hatch.build.targets.wheel]
+packages = ["gmsa_keydump"]
